@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Components/Home';
 import Router from './Components/Router';
 import MenuRutas from './Components/MenuRutas';
+import FormSimple from './Components/FormSimple';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,7 +15,11 @@ root.render(
       <MenuRutas />
       <h1>INDEX PRINCIPAL</h1>
       <hr />
-      <Router />
+      {/* Ejercicio Router base */}
+      {/* <Router /> */}
+
+      {/* Ejercicio de formulario */}
+      <FormSimple />
       <hr />
       <h2>Pie de página</h2>
     </div>
