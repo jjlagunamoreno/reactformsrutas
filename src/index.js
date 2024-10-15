@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Home from './Components/Home';
+import Router from './Components/Router';
+import MenuRutas from './Components/MenuRutas';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div style={{ textAlign: "center" }}>
+      <MenuRutas />
+      <h1>INDEX PRINCIPAL</h1>
+      <hr />
+      <Router />
+      <hr />
+      <h2>Pie de página</h2>
+    </div>
+
   </React.StrictMode>
 );
 
