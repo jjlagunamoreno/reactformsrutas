@@ -11,8 +11,11 @@ export default class MenuRutas extends Component {
                     <li style={{ marginRight: '20px' }}>
                         <a href="/cine">Cine</a>
                     </li>
-                    <li>
+                    <li style={{ marginRight: '20px' }}>
                         <a href="/musica">Música</a>
+                    </li>
+                    <li style={{ marginRight: '20px' }}>
+                        <a href="/collatz">Collatz</a>
                     </li>
                 </ul>
             </div>

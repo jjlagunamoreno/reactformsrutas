@@ -7,6 +7,7 @@ import Home from './Components/Home';
 import Router from './Components/Router';
 import MenuRutas from './Components/MenuRutas';
 import FormSimple from './Components/FormSimple';
+import Collatz from './Components/Collatz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,11 +16,15 @@ root.render(
       <MenuRutas />
       <h1>INDEX PRINCIPAL</h1>
       <hr />
+
       {/* Ejercicio Router base */}
-      {/* <Router /> */}
+      <Router />
 
       {/* Ejercicio de formulario */}
-      <FormSimple />
+      {/* <FormSimple /> */}
+
+      {/* Ejercicio Collatz */}
+      {/* <Collatz /> */}
       <hr />
       <h2>Pie de página</h2>
     </div>
