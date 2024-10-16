@@ -21,9 +21,27 @@ export default class TablaMultiplicar extends Component {
             tabla: aux
         })
     }
+
+    generarOptions = (e) => {
+        console.log("Loading...");
+        //VAMOS A GENERAR DINÁMICAMENTE TODO EL DIBUJO HTML QUE NECESITAMOS
+        var opciones = [];
+        for (var i = 1; i < 5; i++) {
+            var random = parseInt(Math.random() * 50) + 1;
+            opciones.push(<option key={i} value={random}>
+                {random}
+            </option>)
+        }
+        //dibujo para ver si devuelve valores
+        // var dibujo = (<h1>dibujo dinámico</h1>);
+        return opciones;
+    }
+
     render() {
         return (
             <div>
+                {this.generarOptions()}
+
                 <h1>TablaMultiplicar</h1>
 
                 <select ref={this.selectNumero} onChange={this.mostrarTabla}>
