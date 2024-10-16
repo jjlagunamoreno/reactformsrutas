@@ -23,6 +23,9 @@ export default class MenuRutas extends Component {
                     <li style={{ marginRight: '20px' }}>
                         <a href="/multiplicarslect">|TablaMultiplicarSelect </a>
                     </li>
+                    <li style={{ marginRight: '20px' }}>
+                        <a href="/seleccionmultiple">|SeleccionMultiple </a>
+                    </li>
                 </ul>
             </div>
         );
