@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 export default class TablaMultiplicar extends Component {
-    cajaNumero = React.createRef();
+    selectNumero = React.createRef();
     state = {
+        numerosInicio: [1, 2, 4, 6, 53],
         tabla: []
     }
     mostrarTabla = (e) => {
         e.preventDefault();
-        let numero = parseInt(this.cajaNumero.current.value);
+        let numero = parseInt(this.selectNumero.current.value);
         console.log(numero);
         var aux = [];
         for (var i = 1; i <= 10; i++) {
@@ -24,13 +25,18 @@ export default class TablaMultiplicar extends Component {
         return (
             <div>
                 <h1>TablaMultiplicar</h1>
-                <form>
-                    <label>Introduzca número</label>
-                    <input type="text" ref={this.cajaNumero} />
-                    <button onClick={this.mostrarTabla}>
-                        Tabla multiplicar
-                    </button>
-                </form>
+
+                <select ref={this.selectNumero} onChange={this.mostrarTabla}>
+                    {
+                        //pasamos los números del array del select dentro de este en forma de options
+                        this.state.numerosInicio.map((numero, index) => {
+                            return (
+                                <option key={index} value={numero}>{numero}</option>
+                            )
+                        })
+
+                    }
+                </select>
                 <table>
                     <thead>
                         <tr>
@@ -49,7 +55,7 @@ export default class TablaMultiplicar extends Component {
                         }
                     </tbody>
                 </table>
-            </div>
+            </div >
         )
     }
 }
